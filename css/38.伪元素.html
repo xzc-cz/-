@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .father::before{
+            /* content必须添加,否则伪元素不生效  */
+            content: '什么是';
+        }
+
+        .father::after{
+            content: '我不知道';
+            color: red;
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            display: block;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 伪元素 通过css创建标签,装饰不重要的小图 -->
+    <!-- 找父级 在父级里创建子集标签 -->
+    <div class="father">love</div>
+
+</body>
+</html>
