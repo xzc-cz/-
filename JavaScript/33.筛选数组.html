@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                newArr[count] = arr[i];
+                count++;
+            }
+        }
+        console.log(newArr);
+
+        var newArr1 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                newArr1[newArr1.length] = arr[i];
+                count++;
+            }
+        }
+        console.log(newArr1);
+
+
+        var newArr2 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                newArr2[newArr2.length] = arr[i];
+            }
+        }
+        console.log(newArr2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('输入总人数');
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= num; i++) {
+            var grade = prompt('输入第' + i + '个学生成绩');
+            var sum = sum + parseFloat(grade);
+        }
+        alert('总和是' + sum + '分`');
+        average = sum / num;
+        alert('平均分是' + average + '分');
+
+        var str = '';
+        for (var i = 1; i <= num; i++) {
+            str = str + '💘';
+        }
+        console.log(str);
+        alert(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
