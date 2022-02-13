@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = '';
+        var num = prompt('三角形大小');
+        for (var i = 1; i <= num; i++) {
+            for (var j = i; j <= num; j++) {
+                str = str + '💖'
+            }
+            str = str + '\n';
+        }
+        alert(str);
+
+        var sanjiao = '';
+        for (var i = 1; i <= num; i++) {
+            for (var j = num - i; j < num; j++) {
+                sanjiao = sanjiao + '💖'
+            }
+            sanjiao = sanjiao + '\n';
+        }
+        alert(sanjiao);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

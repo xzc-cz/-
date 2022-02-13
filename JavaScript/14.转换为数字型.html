@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.parseInt(变量)
+        var age = prompt('请输入年龄');
+        console.log(parseInt(age));
+        //int自动向下取整
+        console.log(parseInt(3.94));
+        //NaN
+        console.log(parseInt('xzc'));
+
+        //2.parseFloat(变量)
+        console.log(parseFloat('3.14'));
+        //NaN
+        console.log(parseFloat('xzc'));
+
+        //3.Number(变量)
+        var str = '123';
+        console.log(Number(str));
+
+        //4.利用算术运算进行隐式转换
+        console.log('12' - 0);
+        console.log('123' - '120');
+        console.log('12' * 1);
+        console.log('24' / 1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

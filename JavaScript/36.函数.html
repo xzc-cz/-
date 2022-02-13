@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //eg.1-100累加和
+        function getSum(num) {
+            var sum = 0;
+            for (var i = 1; i <= num; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        console.log(getSum(10));
+        console.log(getSum(50));
+        console.log(getSum(100));
+        console.log(getSum(10, 20, 30)); //只取第一个
+        console.log(getSum(10.5));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
