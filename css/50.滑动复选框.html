@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=checkbox]{
+            visibility: hidden;
+        }
+
+        .myCheckbix{
+            width: 120px;
+            height: 40px;
+            background-color: #333;
+            margin: 20px 60px;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .myCheckbox:before{
+            content: '';
+            position: absolute;
+            top: 19px;
+            left: 14px;
+            height: 2px;
+            width: 90px;
+            background-color: #111;
+        }
+
+        .myCheckbox label{
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            transition: all .5s ease;
+            cursor: pointer;
+            position: absolute;
+            top: 9px;
+            z-index: 1;
+            left: 12px;
+            background: #ddd;
+        }
+
+        .myCheckbox input[type=checkbox]:checked + label{
+            left:84px;
+            background-color: #26ca28;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section>
+            <div class="myCheckbox">
+                <input type="checkbox" value="1" id="myCheckboxInput" name="" />
+                <label for="myCheckboxInput"></label>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
