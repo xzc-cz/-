@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /*
+            先找已经定位的父级
+            若有,以这个父级为参照物定位
+            若有父级但父级没有定位
+            以浏览器窗口为参照物进行定位
+            */
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*
+            1.脱标,不占位
+            2.改变标签的显示模式特点:具备行内块特点
+            */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <div class="box">box</div>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+    <p>测试测试测试测试测试测试测试测试测试测试</p>
+
+</body>
+
+</html>
