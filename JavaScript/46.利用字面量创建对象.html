@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用字面量创建对象{}
+        var obj = {}; //创建了一个空对象
+        var obj1 = {
+                uname: 'xzc',
+                age: 18,
+                sex: '男',
+                sayHi: function() {
+                    console.log('hi');
+                }
+            }
+            //属性或方法采用键值对的形式 键 属性名:值 属性值
+            //多个属性或方法用逗号隔开
+            //方法:后面跟的是匿名函数
+
+        //调用对象的属性
+        console.log(obj1.uname);
+        console.log(obj1['age']);
+        //调用对象的方法
+        obj1.sayHi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
