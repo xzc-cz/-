@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function 构造函数名(){
+        //     this.属性 = 值;
+        //     this.方法 = function(){};
+        // }
+        // new 构造函数名();
+        function Star(myname, age, sex) {
+            this.name = myname;
+            this.age = age;
+            this.sex = sex;
+            this.eat = function(eat) {
+                console.log(eat, 'tasty');
+            }
+        }
+        var xzc = new Star('xzc', 21, '男');
+        var yhz = new Star('yhz', 20, '女')
+        console.log(typeof xzc);
+        console.log(xzc.name);
+        console.log(xzc['sex']);
+        xzc.eat('hambuger');
+        console.log(yhz.name);
+        //1.构造函数首字母要大写
+        //2.不需要return就可以返回结果
+        //3.调用构造函数,必须使用new
+        //4.只要new Star就创建了一个对象
+        //5.属性和方法必须添加this
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

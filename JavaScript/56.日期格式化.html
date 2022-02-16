@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //格式化年月日
+        var date1 = new Date();
+        console.log(date1.getFullYear()); //返回当前日期的年份
+        console.log(date1.getMonth()); //返回当前日期的月份(小一个月)
+        console.log(date1.getDate()); //返回当前日期的几号
+        console.log(date1.getDay()); //返回当前日期的周几(周日返回0)
+        console.log(date1.getHours()); //返回当前日期的小时
+        console.log(date1.getMinutes()); //返回当前日期的分钟
+        console.log(date1.getSeconds()); //返回当前日期的秒
+
+        var year = date1.getFullYear();
+        var month = date1.getMonth() + 1;
+        var dates = date1.getDate();
+        var arr = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        var day = date1.getDay();
+        console.log('今天是:' + year + '年' + month + '月' + dates + '日' + arr[day]);
+
+        //封装一个函数返回当时的时分秒
+        function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

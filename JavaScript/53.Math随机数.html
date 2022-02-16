@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Math随机数方法 random()返回一个随机小数[0,1)
+        console.log(Math.random());
+        //随机整数(两数之间不包括最大值)
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        //随机整数(两数之间包括两数)
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + 1) + min;
+        }
+        console.log(getRandomInt(0, 10));
+        console.log(getRandomIntInclusive(0, 10));
+        //随机整数简易版
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //随机点名
+        var arr = ['一号', '二号', '三号', '四号', '五号', '六号'];
+        console.log(arr[getRandom(0, 5)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
