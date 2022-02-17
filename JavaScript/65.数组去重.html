@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'c', 'b'];
+        //核心算法:遍历旧数组,拿旧数组元素查询新数组,如果该元素在新数组没出现过就添加
+        //利用indexOf(数组元素),若返回-1说明新数组没有该元素
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    // newArr[newArr.length] = arr[i];
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+
+        console.log(unique(arr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

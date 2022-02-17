@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        ///根据位置返回字符
+        //1.charAt(index)根据位置返回字符
+        var str = 'xzc'
+        console.log(str.charAt(2));
+        //遍历所有字符
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        //charCodeAt(index)返回相应索引号字符的ASCII值
+        //目的:判断用户按下了哪个键
+        console.log(str.charCodeAt(2));
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charCodeAt(i));
+        }
+
+        //str[index]  H5新增  等效charAt(index)
+        console.log(str[2]);
+        for (var i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

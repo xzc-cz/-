@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //查找o出现的位置以及次数
+        var str = "abcoefoxyozzoppo"
+        var index = str.indexOf('o');
+        var cnt = 0;
+        while (index !== -1) {
+            console.log(index);
+            cnt++;
+            index = str.indexOf('o', index + 1);
+        }
+        console.log('o出现的次数是:' + cnt);
+
+        var arr = ['red', 'blue', 'red', 'green', 'pink', 'red']
+        var index1 = arr.indexOf('red');
+        var num = 0;
+        while (index1 !== -1) {
+            console.log(index1);
+            num++;
+            index1 = arr.indexOf('red', index1 + 1);
+        }
+        console.log('red出现的次数是:' + num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
