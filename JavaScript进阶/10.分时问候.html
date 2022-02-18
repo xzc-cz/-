@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../html5/ciri2.jpg" alt="">
+    <div>你好呀</div>
+
+    <script>
+        //1.获取元素
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        //2.得到当前小时数
+        var date = new Date();
+        var h = date.getHours();
+        //3.判断时间
+        if (h < 12) {
+            div.innerHTML = '早上好,还不快去学习';
+        } else if (h < 18) {
+            div.innerHTML = '下午了,滚去学习';
+        } else {
+            div.innerHTML = '都晚上了,还™不学习?';
+        }
+    </script>
+</body>
+
+</html>

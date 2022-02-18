@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="ciri1">ciri1</button>
+    <button id="ciri2">ciri2</button>
+    <img src="../html5/ciri.jpg" alt="ciri1">
+
+    <script>
+        //1.修改元素属性 src
+        //1.获取元素
+        var ciri1 = document.getElementById('ciri1');
+        var ciri2 = document.getElementById('ciri2');
+        var img = document.querySelector('img');
+        //2.注册事件 处理程序
+        ciri2.onclick = function() {
+            img.src = '../html5/ciri2.jpg';
+            img.alt = 'ciri2';
+        }
+        ciri1.onclick = function() {
+            img.src = '../html5/ciri.jpg';
+            img.alt = 'ciri1';
+        }
+    </script>
+</body>
+
+</html>
