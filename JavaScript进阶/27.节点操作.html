@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 节点的优点 -->
+    <div>this is a div</div>
+    <span>this is a span</span>
+    <ul>
+        <li>this is a li</li>
+        <li>this is a li</li>
+        //这是一行注释
+        <li>this is a li</li>
+    </ul>
+
+    <ol>
+        <li>this is a li 1</li>
+        <li>this is a li 2</li>
+        <li>this is a li 3</li>
+    </ol>
+    <div class="demo">
+        <div class="box">
+            <span class="erweima"></span>
+        </div>
+    </div>
+
+    <script>
+        //1.父节点 parentNode
+        var erweima = document.querySelector('.erweima');
+        // var box = document.querySelector(('.box'))
+        console.log(erweima.parentNode);
+        //得到的是离元素最近的父级节点
+        //若没有返回null
+
+        //2.子节点 
+        // (1)childNode 获得所有子节点 包括元素节点 文本节点等
+        var ul = document.querySelector('ul');
+        // var lis = ul.querySelectorAll('li');
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+        for (var i = 0; i < ul.childNodes.length; i++) {
+            if (ul.childNodes[i].nodeType == 1) {
+                //ui.childNodes[i]是元素节点
+                console.log(ul.childNodes[i]);
+            }
+        }
+        // (2)children
+        //非标准 parentNode.children 但是好用
+        console.log(ul.children);
+
+        //获取第一个或者最后一个子元素
+        //firstChild 第一个子节点
+        //lasthild 最后一个子节点
+        //指所有节点,包括元素或者文本
+        var ol = document.querySelector('ol');
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        //IE9以上支持
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+
+        //实际开发的写法
+        console.log(ol.children[0]);
+        console.log(ol.children[2]);
+        console.log(ol.children[ol.children.length - 1]);
+    </script>
+</body>
+
+</html>
