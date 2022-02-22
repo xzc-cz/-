@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+
+    <script>
+        var div = document.querySelector('div');
+        // div.onclick = function(event) {
+        //         console.log(event);
+        //     }
+
+        div.addEventListener('click', function(e) {
+                console.log(e);
+            })
+            //1.event 就是一个事件对象 写到侦听函数的小括号里当形参看
+            //2.事件对象只有有了事件才会存在，它是系统自动创建的 不需要传递参数
+            //3.事件对象是 事件的一系列相关数据的集合 与事件有关
+            //鼠标点击：包含鼠标相关信息 如鼠标坐标
+            //键盘事件：包含键盘相关幸喜 如用户按下了哪个键
+            //4.事件对象可以自己命名 如event,evt,e
+            //5.ie678 通过window.event
+    </script>
+</body>
+
+</html>
