@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            // this.sing = function() {
+            //     console.log('我会唱歌');
+            // }
+        }
+        Star.prototype.sing = function() {
+            console.log('我会唱歌');
+        }
+
+        var xzc = new Star('许泽辰', 21);
+        var yhz = new Star('杨涵之', 20)
+
+        console.log(Star);
+        console.dir(Star);
+        xzc.sing();
+        yhz.sing();
+        //一般情况 公共属性放构造函数
+        //公共方法放原型对象
+    </script>
+</body>
+
+</html>

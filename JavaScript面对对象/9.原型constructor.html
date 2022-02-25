@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        // Star.prototype.sing = function() {
+        //     console.log('我会唱歌');
+        // }
+
+        Star.prototype = {
+            //如果修改了原来的原型对象，给原型对象赋值的是一个对象
+            //必须手动利用constructor指回原来的构造函数
+            constructor: Star,
+            sing: function() {
+                console.log('我会唱歌');
+            },
+            movie: function() {
+                console.log('我会演戏');
+            }
+        }
+
+        var xzc = new Star('许泽辰', 21);
+        var yhz = new Star('杨涵之', 20)
+
+        console.log(Star.prototype);
+        console.log(xzc.__proto__);
+        console.log(Star.prototype.constructor);
+        console.log(xzc.__proto__.constructor);
+        // console.log(Star);
+        // console.dir(Star);
+        // xzc.sing();
+        // yhz.sing();
+        // console.log(xzc);
+
+        // console.log(xzc.__proto__ === Star.prototype);
+        //方法的查找规则：首先看xzc对象是否有sing方法，若有就执行
+        //若没有sing，因为有__proto__存在，就去构造函数原型对象prototype上找
+    </script>
+</body>
+
+</html>
