@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        // Star.prototype.sing = function() {
+        //     console.log('我会唱歌');
+        // }
+
+        Star.prototype = {
+            //如果修改了原来的原型对象，给原型对象赋值的是一个对象
+            //必须手动利用constructor指回原来的构造函数
+            constructor: Star,
+            sing: function() {
+                console.log('我会唱歌');
+            },
+            movie: function() {
+                console.log('我会演戏');
+            }
+        }
+
+        var xzc = new Star('许泽辰', 21);
+        var yhz = new Star('杨涵之', 20);
+
+        xzc.number = 1;
+        Star.prototype.number = 2;
+        Object.prototype.number = 3;
+        console.log(xzc.number);
+
+        //只要是对象就有原型,指向原型对象
+        // console.log(Star.prototype);
+        // console.log(Star.prototype.__proto__ === Object.prototype);
+        // //Star原型对象里的原型指向的是Object.prototype
+        // console.log(Object.prototype.__proto__);
+        //Object.prototype原型对象里的原型指向为 null
+    </script>
+</body>
+
+</html>
