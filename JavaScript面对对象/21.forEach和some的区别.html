@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ['red', 'green', 'blue', 'yellow'];
+        //1.forEach遍历
+        arr.forEach(function(value) {
+            if (value == 'green') {
+                console.log('找到了');
+                return true; //forEach里return不会中止迭代
+            }
+            console.log(111);
+        })
+
+        var arr1 = ['red', 'green', 'blue', 'yellow'];
+        //1.forEach遍历
+        arr1.some(function(value) {
+            if (value == 'green') {
+                console.log('找到了');
+                return true; //some里遇到return true会中止
+            }
+            console.log(222);
+        })
+    </script>
+</body>
+
+</html>
