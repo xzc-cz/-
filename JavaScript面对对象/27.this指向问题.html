@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button></button>
+    <script>
+        //1.普通函数this 指向window
+        function fn() {
+            console.log('普通函数的this' + this);
+        }
+        window.fn();
+        fn.call();
+        // 2.对象的方法 this 指向对象o
+        var o = {
+            sayHi: function() {
+                console.log('Hi' + this);
+            }
+        }
+        o.sayHi();
+        // //3.构造函数this指向实例对象
+        //原型对象里的this也指向实例对象
+        function Star() {
+            console.log('构造函数' + this);
+        };
+        var xzc = new Star();
+        // //4.绑定事件函数this指向函数的调用者(btn按钮)
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+            console.log('点击按钮' + this);
+        };
+        // //5.定时器函数this指向window
+        setInterval(function() {
+            console.log('每隔一秒' + this);
+        }, 1000); //每隔一秒调用一次
+        // //6.立即执行函数this还是指向window
+        (function() {
+            console.log('即刻执行' + this);
+        })();
+    </script>
+</body>
+
+</html>

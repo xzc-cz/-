@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button></button>
+    <script>
+        //1.普通函数
+        function fn() {
+            console.log('普通函数');
+        }
+        fn();
+        fn.call();
+        //2.对象的方法
+        var o = {
+            sayHi: function() {
+                console.log('Hi');
+            }
+        }
+        o.sayHi();
+        //3.构造函数
+        function Star() {
+
+        };
+        new Star();
+        //4.绑定事件函数
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+            console.log('点击按钮');
+        };
+        //5.定时器函数
+        setInterval(function() {
+            console.log('每隔一秒');
+        }, 1000); //每隔一秒调用一次
+        //6.立即执行函数
+        (function() {
+            console.log('即刻执行');
+        })();
+    </script>
+</body>
+
+</html>
