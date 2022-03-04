@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //[0-9]
+        var rg0 = /^\d$/;
+        console.log(rg0.test('6'));
+        console.log('-----------------');
+        //[^0-9]
+        var rg1 = /^\D$/;
+        console.log(rg1.test('6'));
+        console.log('-----------------');
+
+        //[a-zA-Z0-9]
+        var rg2 = /^\w$/;
+        console.log(rg2.test('6'));
+        console.log(rg2.test('a'));
+        console.log(rg2.test('A'));
+        console.log('-----------------');
+
+        //[^a-zA-Z0-9]
+        var rg3 = /^\W$/;
+        console.log(rg3.test('6'));
+        console.log(rg3.test('a'));
+        console.log(rg3.test('A'));
+        console.log('-----------------');
+
+        //[\t\r\n\v\f]
+        var rg4 = /^\s$/;
+        console.log(rg4.test(' '));
+        console.log(rg4.test('\n'));
+        console.log('-----------------');
+
+        //[^\t\r\n\v\f]
+        var rg5 = /^\S$/;
+        console.log(rg5.test(' '));
+        console.log(rg5.test('\n'));
+        console.log('-----------------');
+    </script>
+</body>
+
+</html>

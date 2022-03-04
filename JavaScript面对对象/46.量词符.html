@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var reg = /^a$/;
+
+        //* 可以出现0次或多次
+        var rg = /^a*$/;
+        console.log(rg.test(''));
+        console.log(rg.test('a'));
+        console.log(rg.test('aaaa'));
+        console.log(rg.test('ab'));
+        console.log('-------------------');
+        //+ 可以出现1次或多次
+        var rg1 = /^a+$/;
+        console.log(rg1.test(''));
+        console.log(rg1.test('a'));
+        console.log(rg1.test('aaaa'));
+        console.log(rg1.test('ab'));
+        console.log('-------------------');
+        //? 相当于1||0
+        var rg2 = /^a?$/;
+        console.log(rg2.test(''));
+        console.log(rg2.test('a'));
+        console.log(rg2.test('aaaa'));
+        console.log(rg2.test('ab'));
+        console.log('-------------------');
+        //{3}重复三次
+        var rg3 = /^a{3}$/
+        console.log(rg3.test(''));
+        console.log(rg3.test('a'));
+        console.log(rg3.test('aaa'));
+        console.log(rg3.test('aaaaaa'));
+        console.log('-------------------');
+        //{3,} 重复三次及以上
+        var rg4 = /^a{3,}$/;
+
+        console.log(rg4.test(''));
+        console.log(rg4.test('a'));
+        console.log(rg4.test('aaa'));
+        console.log(rg4.test('aaaaaaaaa'));
+        console.log(rg4.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'));
+        console.log('-------------------');
+        //{3,16} 重复不低于三次 不超过16次
+        var rg5 = /^a{3,16}$/;
+        console.log(rg5.test(''));
+        console.log(rg5.test('a'));
+        console.log(rg5.test('aaa'));
+        console.log(rg5.test('aaaaaaaaa'));
+        console.log(rg5.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'));
+        console.log('-------------------');
+    </script>
+</body>
+
+</html>

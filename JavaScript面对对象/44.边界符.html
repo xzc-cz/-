@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //边界符 ^ $
+        var rg = /abc/; //正则表达式不需要加引号
+        // /abc/ 只要包含'abc'这个字符串就返回true
+        console.log(rg.test('abc'));
+        console.log(rg.test('cba'));
+        console.log(rg.test('abcd'));
+        console.log(rg.test('abd'));
+        console.log(rg.test('aabcd'));
+        console.log(rg.test('abcabc'));
+        console.log('---------------------');
+        var reg = /^abc/;
+        console.log(reg.test('abc'));
+        console.log(reg.test('cba'));
+        console.log(reg.test('abcd'));
+        console.log(reg.test('abd'));
+        console.log(reg.test('aabcd'));
+        console.log(reg.test('abcabc'));
+        console.log('---------------------');
+        var reg1 = /^abc$/;
+        console.log(reg1.test('abc'));
+        console.log(reg1.test('cba'));
+        console.log(reg1.test('abcd'));
+        console.log(reg1.test('abd'));
+        console.log(reg1.test('aabcd'));
+        console.log(reg1.test('abcabc'));
+        console.log('---------------------');
+    </script>
+</body>
+
+</html>
