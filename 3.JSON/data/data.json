@@ -1,0 +1,29 @@
+[{
+    "id": "111",
+    "name": "xzc",
+    "sex": "male",
+    "age": 21,
+    "score": [78, 25, 64, 91, 45, 100],
+    "addr": "China"
+}, {
+    "id": "112",
+    "name": "a",
+    "sex": "female",
+    "age": 19,
+    "score": [38, 45, 24, 41, 45, 80],
+    "addr": "China"
+}, {
+    "id": "113",
+    "name": "b",
+    "sex": "male",
+    "age": 20,
+    "score": [48, 25, 64, 31, 45, 100],
+    "addr": "China"
+}, {
+    "id": "114",
+    "name": "c",
+    "sex": "male",
+    "age": 18,
+    "score": [58, 25, 64, 91, 45, 10],
+    "addr": "China"
+}]
