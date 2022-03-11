@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>
+            {{message}}
+        </h2>
+        <!-- 不可以使用mustache语法 -->
+        <!-- <img src="{{imgURL}}" alt=""> -->
+        <img v-bind:src="imgURL1" alt="vue">
+        <a v-bind:href="aHref1">vue.js介绍</a>
+        <!-- 语法糖写法 -->
+        <img :src="imgURL2" alt="ES6">
+        <a :href="aHref2">ES6介绍</a>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+                imgURL1: 'https://vuejs.bootcss.com/images/logo.png',
+                aHref1: 'https://vuejs.bootcss.com/guide/',
+                imgURL2: 'https://es6.ruanyifeng.com/images/cover_thumbnail_3rd.jpg',
+                aHref2: 'https://es6.ruanyifeng.com/'
+            }
+        })
+    </script>
+</body>
+
+</html>
