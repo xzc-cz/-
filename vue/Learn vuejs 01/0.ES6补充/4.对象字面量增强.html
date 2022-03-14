@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // const obj = new Object()
+
+        // const obj = {
+        //     name: 'xzc',
+        //     age: 21,
+        //     run: function() {
+        //         console.log('跑');
+        //     },
+        //     eat: function() {
+        //         console.log('吃');
+        //     }
+        // }
+
+        //1.属性的增强写法
+        const name = 'xzc';
+        const age = 21;
+        const height = 1.85;
+
+        //ES5写法
+        const obj = {
+            name: name,
+            age: age,
+            height: height
+        }
+        console.log(obj);
+        //ES6写法
+        const obj1 = {
+            name,
+            age,
+            height
+        }
+        console.log(obj1);
+
+
+        //2.函数的增强写法
+        //ES5
+        const obj2 = {
+            run: function() {
+                console.log('跑');
+            },
+            eat: function() {
+                console.log('吃');
+            }
+        }
+
+        //ES6
+        const obj3 = {
+            run() {
+                console.log('跑');
+            },
+            eat() {
+                console.log('吃');
+            }
+        }
+    </script>
+</body>
+
+</html>
