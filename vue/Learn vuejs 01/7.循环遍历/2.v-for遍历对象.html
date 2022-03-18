@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 1.在遍历对象的过程中,若只获取一个值,那么获取到的是value -->
+        <ul>
+            <li v-for="item in info">{{item}}</li>
+        </ul>
+        <!-- 2.获取value和key---->
+        <ul>
+            <li v-for="(value,key) in info">{{value}}-{{key}}</li>
+        </ul>
+    </div>
+
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                info: {
+                    name: 'xzc',
+                    age: 21,
+                    height: 1.85
+                }
+
+            },
+        })
+    </script>
+</body>
+
+</html>
