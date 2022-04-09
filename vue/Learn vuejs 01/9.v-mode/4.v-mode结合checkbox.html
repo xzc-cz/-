@@ -24,6 +24,10 @@
             <input type="checkbox" value="4" v-model="hobbies">4
             <h2>你的选择是{{hobbies}}</h2>
         </label>
+
+        <label v-for="item in originNumbers">
+            <input type="checkbox" :value="item" v-model="hobbies">{{item}}
+        </label>
     </div>
 
     <script src="../js/vue.js"></script>
@@ -33,7 +37,8 @@
             data: {
                 message: '你好啊',
                 isAgree: false,
-                hobbies: []
+                hobbies: [],
+                originNumbers: [1, 2, 3, 4, 5, 6, 7]
 
             },
         })
