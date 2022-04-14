@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <cpn1></cpn1>
+        <cpn1></cpn1>
+        <cpn1></cpn1>
+
+        <cpn2></cpn2>
+        <cpn2></cpn2>
+        <cpn2></cpn2>
+    </div>
+
+    <!-- 1.script标签 -->
+    <script type="text/x-template" id="cpn1">
+        <div>
+            <h2>{{title1}}</h2>
+            <p>内容...............</p>
+            <p>内容...............</p>
+            <p>内容...............</p>
+        </div>
+    </script>
+
+    <!-- 2.template标签 -->
+    <template id="cpn2">
+        <div>
+            <h2>{{title2}}</h2>
+            <p>内容...............</p>
+            <p>内容...............</p>
+            <p>内容...............</p>
+        </div>
+    </template>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.component(`cpn1`, {
+            template: '#cpn1',
+            data() {
+                return {
+                    title1: '标题111111'
+                }
+            }
+        })
+
+        Vue.component(`cpn2`, {
+            template: '#cpn2',
+            data() {
+                return {
+                    title2: '标题22222'
+                }
+            }
+        })
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+            }
+        })
+    </script>
+
+</body>
+
+</html>
